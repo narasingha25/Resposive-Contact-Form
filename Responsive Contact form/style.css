@@ -1,0 +1,151 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:sans-serif;}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(192,230,245);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.container {
+  display:flex;
+  flex-wrap:nowrap;
+  max-width:90%;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detail, .message {padding:35px;}
+.detail {
+  width:30%;
+  background:#f5f5f5;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+  align-items:center;
+  text-align:center;
+}
+.detail i {
+  font-size:22px;
+  color:rgb(88,15,157);
+}
+.heading {
+  font-weight:bold;
+  margin:5px 0;
+  color:rgb(71,13,125);
+}
+
+.message {width:70%;}
+.message h2 {color:rgb(88,15,157); margin-bottom:10px;}
+.message p {margin-bottom:15px; line-height:1.5;}
+
+.input {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+input, textarea {
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:15px;
+  transition:border-color 0.3s;
+}
+input:focus, textarea:focus {
+  border-color:rgb(88,15,157);
+  outline:none;
+}
+button.submit {
+  background:rgb(88,15,157);
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:5px;
+  font-size:16px;
+  cursor:pointer;
+  align-self:flex-start;
+  transition:background 0.3s;
+}
+button.submit:hover {
+  background:rgb(70,10,130);
+}
+
+/* Success/Error Message */
+.status {
+  margin-top:10px;
+  font-size:14px;
+  min-height:18px;
+  transition:opacity 0.3s;
+}
+.status.success {color:green;}
+.status.error {color:red;}
+
+/* Responsive */
+@media(max-width:900px){
+  .container {flex-direction:column-reverse;}
+  .detail, .message {width:100%;}
+  .detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+}
+/* Inputs and textarea */
+input, textarea {
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  font-size:15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  background-color: #fafafa;
+}
+
+input:hover, textarea:hover {
+  border-color: rgb(150, 120, 200);
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(88,15,157);
+  outline: none;
+  box-shadow: 0 0 8px rgba(88,15,157,0.3);
+  transform: scale(1.01);
+  background-color: #fff;
+}
+
+/* Button transitions */
+button.submit {
+  background: rgb(88,15,157);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.submit:hover {
+  background: rgb(70,10,130);
+  transform: translateY(-2px);
+}
+
+/* Optional subtle fade-in for status messages */
+.status {
+  margin-top: 10px;
+  font-size: 14px;
+  min-height: 18px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.status.success,
+.status.error {
+  opacity: 1;
+}

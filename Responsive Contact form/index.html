@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Responsive Contact Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- Contact Details -->
+        <div class="detail">
+          <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="heading">Address</p>
+            <div>Radha Krishna temple</div>
+            <div>Gopalmaal, Sambalpur</div>
+          </div>
+          <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            <p class="heading">Phone</p>
+            <div>+91 63720 22322</div>
+            <div>+91 78945 74227</div>
+          </div>
+          <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="heading">Email</p>
+            <div>naramahananda@gmail.com</div>
+            <div>narasinghaa@gmail.com</div>
+          </div>
+        </div>
+
+        <!-- Message Form -->
+        <div class="message">
+          <form id="contactForm" novalidate>
+            <h2>Send a message</h2>
+            <p>
+              Myself Narasingha Mahananda, a student of MNNIT Allahabad. If you
+              have any doubts or queries related to website development, feel
+              free to send me a message.
+            </p>
+            <div class="input">
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <textarea
+                id="msg"
+                placeholder="Enter your Message"
+                rows="4"
+                required
+              ></textarea>
+              <button type="submit" class="submit">Send Now</button>
+            </div>
+            <div id="form-status" class="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
